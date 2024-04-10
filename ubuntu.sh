@@ -11,12 +11,21 @@ sudo apt-get install fish -y
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 omf install agnoster
 
-# Fisher
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
-fisher install jorgebucaran/nvm.fish
-
 # Change shell
 chsh -s /usr/bin/fish
+
+# Fisher
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+
+# Node (Install before NVIM or else LSP won't work)
+fisher install jorgebucaran/nvm.fish
+nvm install 18
+nvm use 18
+
+# ZOxide
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # Neovim
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
