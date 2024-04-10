@@ -18,9 +18,11 @@ fisher install jorgebucaran/nvm.fish
 # Change shell
 chsh -s /usr/bin/fish
 
-
 # Neovim
-sudo apt install neovim
+sudo add-apt-repository ppa:neovim-ppa/unstable -y
+sudo apt update -y
+sudo apt install make gcc ripgrep unzip git neovim -y
+sudo apt install neovim -y
 
 
 # Fonts
