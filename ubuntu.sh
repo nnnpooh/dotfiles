@@ -24,6 +24,7 @@ sudo apt update -y
 sudo apt install make gcc ripgrep unzip git neovim -y
 sudo apt install neovim -y
 
+cd ~/ & git clone git@github.com:nnnpooh/kickstart.nvim.git ~/.config/nvim
 
 # Fonts
 # cd ~/
