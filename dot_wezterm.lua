@@ -46,7 +46,8 @@ config.scrollback_lines = 7000
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
 config.hide_tab_bar_if_only_one_tab = true
 -- config.color_scheme = "Flexoki Dark"
-config.color_scheme = "AdventureTime"
+-- config.color_scheme = "AdventureTime"
+config.color_scheme = "Catppuccin Mocha"
 config.font = wezterm.font_with_fallback({
 	{
 		family = "Hack Nerd Font",
