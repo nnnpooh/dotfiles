@@ -3,4 +3,5 @@ if status is-interactive
     set PATH $PATH ~/.local/bin
     zoxide init fish | source
     alias erppy "source ~/erp/env/bin/activate.fish"
+    nvm use 21
 end
