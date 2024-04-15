@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local mux = wezterm.mux
 local act = wezterm.action
-local config = {}
+local config = wezterm.config_builder()
 local keys = {}
 local mouse_bindings = {}
 local launch_menu = {}
@@ -144,6 +144,16 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	return {
 		{ Text = title },
 	}
+end)
+
+wezterm.on("gui-attached", function(domain)
+	-- maximize all displayed windows on startup
+	local workspace = mux.get_active_workspace()
+	for _, window in ipairs(mux.all_windows()) do
+		if window:get_workspace() == workspace then
+			window:gui_window():maximize()
+		end
+	end
 end)
 
 --- Default config settings
