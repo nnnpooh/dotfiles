@@ -70,6 +70,7 @@ local process_icons = {
 	["curl"] = wezterm.nerdfonts.mdi_flattr,
 	["gh"] = wezterm.nerdfonts.dev_github_badge,
 	["ruby"] = wezterm.nerdfonts.cod_ruby,
+	-- ["powershell.exe"] = wezterm.nerdfonts.cod_terminal_cmd .. " ",
 }
 
 local function get_current_working_dir(tab)
