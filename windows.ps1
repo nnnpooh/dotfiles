@@ -1,3 +1,6 @@
+# Powershell Core
+choco install powershell-core --version 7.4.2
+
 # NVIM
 choco install -y neovim git ripgrep wget fd unzip gzip mingw make
 
