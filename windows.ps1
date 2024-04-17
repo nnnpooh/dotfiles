@@ -1,12 +1,20 @@
 # Powershell Core
 choco install powershell-core --version 7.4.2
 
-# zoxide and fzf
-chocho install zoxide
-choco install fzf
+# Create powershell profile
+New-Item -Path $PROFILE -Type File -Force
+
+# Oh-my-posh
+choco install oh-my-posh
+$env:Path += ";C:\Users\user\AppData\Local\Programs\oh-my-posh\bin"
 
 # Create powershell profile
 New-Item -Path $PROFILE -Type File -Force
+
+# zoxide and fzf (activation script is included in powershell profile)
+chocho install zoxide
+choco install fzf
+
 
 # NVIM
 choco install -y neovim git ripgrep wget fd unzip gzip mingw make
