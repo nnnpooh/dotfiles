@@ -1,6 +1,13 @@
 # Powershell Core
 choco install powershell-core --version 7.4.2
 
+
+New-Item -Path $PROFILE -Type File -Force
+
+notepad $profile
+# Add this line to the command line
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
 # NVIM
 choco install -y neovim git ripgrep wget fd unzip gzip mingw make
 
