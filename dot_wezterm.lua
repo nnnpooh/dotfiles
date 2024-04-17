@@ -9,7 +9,7 @@ local launch_menu = {}
 --- Setup PowerShell options
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	--- Set Pwsh as the default on Windows
-	config.default_prog = { "powershell.exe", "-NoLogo" }
+	config.default_prog = { "pwsh.exe", "-NoLogo" }
 	table.insert(launch_menu, {
 		label = "PowerShell",
 		args = { "powershell.exe", "-NoLogo" },
