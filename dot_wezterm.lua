@@ -167,11 +167,11 @@ config.font = wezterm.font_with_fallback({
 	{
 		family = "Hack Nerd Font",
 	},
-	{
-		family = "Prompt",
-		-- harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
-		-- cell_width = 1,
-	},
+	-- {
+	-- family = "Prompt",
+	-- harfbuzz_features = { "calt=0", "clig=0", "liga=0" },
+	-- cell_width = 1,
+	-- },
 })
 config.font_size = 12
 config.line_height = 1
