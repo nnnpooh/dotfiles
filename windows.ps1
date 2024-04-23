@@ -16,7 +16,7 @@ New-Item -Path $PROFILE -Type File -Force
 
 # Oh-my-posh
 choco install oh-my-posh
-$env:Path += ";C:\Users\user\AppData\Local\Programs\oh-my-posh\bin"
+$env:Path += ";$env:LOCALAPPDATA\Programs\oh-my-posh\bin"
 
 # zoxide and fzf (activation script is included in powershell profile)
 choco install zoxide
