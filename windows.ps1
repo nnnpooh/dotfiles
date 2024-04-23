@@ -25,6 +25,11 @@ choco install fzf
 # NVIM
 choco install -y neovim git ripgrep wget fd unzip gzip mingw make
 
+# NVM
+choco install nvm
+nvm install 21
+nvm use 21
+
 # Fonts
 choco install nerd-fonts-hack
 
