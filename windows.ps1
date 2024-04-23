@@ -41,3 +41,6 @@ cd $env:USERPROFILE/appdata/local
 git clone git@github.com:nnnpooh/kickstart.nvim.git nvim
 cd nvim
 git checkout -t origin/nr 
+
+# VScode
+choco install vscode
