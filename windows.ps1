@@ -1,5 +1,15 @@
+# ----- On Powershell 5
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine   
+
+# Choco
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
 # Powershell Core
 choco install powershell-core --version 7.4.2
+
+# ----- On Powershell Core
+choco install googlechrome --ignore-checksums                                                                                                                           
+choco install pdf24
 
 # Create powershell profile
 New-Item -Path $PROFILE -Type File -Force
