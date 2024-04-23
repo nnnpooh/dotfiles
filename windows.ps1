@@ -44,3 +44,4 @@ git checkout -t origin/nr
 
 # VScode
 choco install vscode
+choco install docker-desktop
