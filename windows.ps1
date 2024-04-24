@@ -47,3 +47,4 @@ choco install vscode
 choco install docker-desktop
 choco install winrar
 choco install freecommander-xe.install --ignore-checksums
+choco install screenpresso
