@@ -111,41 +111,41 @@ local function get_process(tab)
 	return process_icons[process_name]
 end
 
-wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-	local has_unseen_output = false
-	if not tab.is_active then
-		for _, pane in ipairs(tab.panes) do
-			if pane.has_unseen_output then
-				has_unseen_output = true
-				break
-			end
-		end
-	end
-
-	local cwd = wezterm.format({
-		{ Text = get_current_working_dir(tab) },
-	})
-
-	if isempty(cwd) then
-		cwd = "./"
-	end
-
-	local process = get_process(tab)
-
-	local title = process and string.format(" %s (%s)  ", process, cwd) or " [?] "
-
-	if has_unseen_output then
-		return {
-			{ Foreground = { Color = "#28719c" } },
-			{ Text = title },
-		}
-	end
-
-	return {
-		{ Text = title },
-	}
-end)
-
+-- wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+-- 	local has_unseen_output = false
+-- 	if not tab.is_active then
+-- 		for _, pane in ipairs(tab.panes) do
+-- 			if pane.has_unseen_output then
+-- 				has_unseen_output = true
+-- 				break
+-- 			end
+-- 		end
+-- 	end
+--
+-- 	local cwd = wezterm.format({
+-- 		{ Text = get_current_working_dir(tab) },
+-- 	})
+--
+-- 	if isempty(cwd) then
+-- 		cwd = "./"
+-- 	end
+--
+-- 	local process = get_process(tab)
+--
+-- 	local title = process and string.format(" %s (%s)  ", process, cwd) or " [?] "
+--
+-- 	if has_unseen_output then
+-- 		return {
+-- 			{ Foreground = { Color = "#28719c" } },
+-- 			{ Text = title },
+-- 		}
+-- 	end
+--
+-- 	return {
+-- 		{ Text = title },
+-- 	}
+-- end)
+--
 wezterm.on("gui-attached", function(domain)
 	-- maximize all displayed windows on startup
 	local workspace = mux.get_active_workspace()
@@ -181,6 +181,5 @@ config.default_cursor_style = "BlinkingBar"
 config.keys = keys
 config.mouse_bindings = mouse_bindings
 -- config.leader = leader
-config.prefer_egl = true
 
 return config
