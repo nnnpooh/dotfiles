@@ -181,5 +181,6 @@ config.default_cursor_style = "BlinkingBar"
 config.keys = keys
 config.mouse_bindings = mouse_bindings
 -- config.leader = leader
+config.prefer_egl = true
 
 return config
