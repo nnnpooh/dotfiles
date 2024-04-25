@@ -31,10 +31,10 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update -y
 sudo apt install make gcc ripgrep unzip git neovim -y
-sudo apt install neovim -y
 
+# Neovim config
 cd ~/ & git clone git@github.com:nnnpooh/kickstart.nvim.git ~/.config/nvim
-
+cd ~/.config/nvim & git checkout -t origin/nr
 # Fonts
 # cd ~/
 # wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
