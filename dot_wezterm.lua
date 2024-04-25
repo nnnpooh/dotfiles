@@ -18,6 +18,12 @@ else
 	--- Non-Windows Machine
 end
 
+table.insert(keys, {
+	key = "W",
+	mods = "CTRL|ALT",
+	action = wezterm.action.CloseCurrentPane({ confirm = true }),
+})
+
 -- Mousing bindings
 mouse_bindings = {
 	-- Change the default click behavior so that it only selects
