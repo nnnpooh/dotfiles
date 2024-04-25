@@ -37,9 +37,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 sudo apt-get install make gcc ripgrep unzip git -y
 sudo apt-get install ninja-build gettext cmake unzip curl build-essential
 mkdir -p $HOME/local/nvim
-cd ~/ && git clone https://github.com/neovim/neovim
+cd $HOME && git clone https://github.com/neovim/neovim
 # git checkout stable
-cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
+cd $HOME/neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
 make CMAKE_INSTALL_PREFIX=$HOME/local/nvim install
 
 # Neovim config

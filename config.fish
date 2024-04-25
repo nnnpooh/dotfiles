@@ -4,4 +4,5 @@ if status is-interactive
     zoxide init fish | source
     alias erppy "source ~/erp/env/bin/activate.fish"
     nvm use 21
+    fish_add_path $HOME/local/nvim/bin
 end
