@@ -28,13 +28,24 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
 # Neovim
-sudo add-apt-repository ppa:neovim-ppa/unstable -y
-sudo apt update -y
-sudo apt install make gcc ripgrep unzip git neovim -y
+# Turn out that ubuntu apt-get get the latest unstable build which break Mason 0.10.
+# sudo add-apt-repository ppa:neovim-ppa/unstable -y
+# sudo apt update -y
+# sudo apt install make gcc ripgrep unzip git neovim -y
+
+
+sudo apt-get install make gcc ripgrep unzip git -y
+sudo apt-get install ninja-build gettext cmake unzip curl build-essential
+mkdir -p $HOME/local/nvim
+cd ~/ && git clone https://github.com/neovim/neovim
+# git checkout stable
+cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
+make CMAKE_INSTALL_PREFIX=$HOME/local/nvim install
 
 # Neovim config
-cd ~/ & git clone git@github.com:nnnpooh/kickstart.nvim.git ~/.config/nvim
-cd ~/.config/nvim & git checkout -t origin/nr
+cd $HOME & git clone git@github.com:nnnpooh/kickstart.nvim.git $HOME/.config/nvim
+cd $HOME/.config/nvim & git checkout -t origin/nr
+
 # Fonts
 # cd ~/
 # wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
