@@ -19,8 +19,8 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 
 # Node (Install before NVIM or else LSP won't work)
 fisher install jorgebucaran/nvm.fish
-nvm install 18
-nvm use 18
+nvm install 21
+nvm use 21
 
 # ZOxide
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
