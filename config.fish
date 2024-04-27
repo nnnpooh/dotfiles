@@ -5,4 +5,5 @@ if status is-interactive
     alias erppy "source ~/erp/env/bin/activate.fish"
     nvm use 21
     fish_add_path $HOME/local/nvim/bin
+    cd $HOME
 end
