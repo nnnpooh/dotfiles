@@ -1,0 +1,7 @@
+[user]
+	email = nnnpooh@gmail.com
+	name = Nirand Pisutha-Arnond
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
