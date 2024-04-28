@@ -8,8 +8,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install powershell-core --version 7.4.2
 
 # ----- On Powershell Core
-choco install googlechrome --ignore-checksums                                                                                                                           
-choco install pdf24
+choco install googlechrome --ignore-checksums
 
 # Create powershell profile
 New-Item -Path $PROFILE -Type File -Force
@@ -24,8 +23,6 @@ choco install fzf
 
 # NVIM
 choco install -y neovim git ripgrep wget fd unzip gzip mingw make
-
-# NVM
 choco install nvm
 nvm install 21
 nvm use 21
@@ -42,7 +39,7 @@ git clone git@github.com:nnnpooh/kickstart.nvim.git nvim
 cd nvim
 git checkout -t origin/nr 
 
-# VScode
+# Application
 choco install vscode
 choco install docker-desktop
 choco install winrar
@@ -51,3 +48,6 @@ choco install screenpresso
 choco install dbeaver
 choco install obs-studio
 choco install postman
+choco install sumatrapdf.install
+choco install pdf24
+choco install ccleaner
