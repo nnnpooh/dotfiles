@@ -54,3 +54,5 @@ choco install ccleaner
 choco install line
 choco install zoom
 choco install inkscape
+choco install googledrive
+choco install python311
