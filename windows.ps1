@@ -56,6 +56,10 @@ choco install zoom
 choco install inkscape
 choco install googledrive
 choco install python311
+choco install notepadplusplus.install
+choco install treesizefree
+choco install vlc.install
+choco install gimp
 
 # App not working 
 # one drive
