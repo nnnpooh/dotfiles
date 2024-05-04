@@ -56,3 +56,7 @@ choco install zoom
 choco install inkscape
 choco install googledrive
 choco install python311
+
+# App not working 
+# one drive
+# team
