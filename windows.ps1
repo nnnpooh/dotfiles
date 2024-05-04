@@ -39,7 +39,7 @@ git clone git@github.com:nnnpooh/kickstart.nvim.git nvim
 cd nvim
 git checkout -t origin/nr 
 
-# Application
+# Application (add -y to skip confirmation)
 choco install vscode
 choco install docker-desktop
 choco install winrar
@@ -51,3 +51,6 @@ choco install postman
 choco install sumatrapdf.install
 choco install pdf24
 choco install ccleaner
+choco install line
+choco install zoom
+choco install inkscape
