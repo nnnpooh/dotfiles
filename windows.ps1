@@ -29,6 +29,7 @@ nvm use 21
 
 # Fonts
 choco install nerd-fonts-hack
+choco install nerd-fonts-jetbrainsmono
 
 # Wezterm
 choco install wezterm
