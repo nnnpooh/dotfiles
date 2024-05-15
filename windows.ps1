@@ -61,6 +61,7 @@ choco install notepadplusplus.install
 choco install treesizefree
 choco install vlc.install
 choco install gimp
+choco install discord
 
 # App not working 
 # one drive
