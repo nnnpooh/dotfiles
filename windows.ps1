@@ -62,7 +62,7 @@ choco install treesizefree
 choco install vlc.install
 choco install gimp
 choco install discord
-
+choco install mendeley
 # App not working 
 # one drive
 # team
