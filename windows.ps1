@@ -44,6 +44,8 @@ git checkout -t origin/nr
 choco install vscode
 choco install docker-desktop
 choco install golang
+# Github CLI
+choco install gh
 choco install winrar
 choco install freecommander-xe.install --ignore-checksums
 choco install screenpresso
@@ -63,7 +65,8 @@ choco install treesizefree
 choco install vlc.install
 choco install gimp
 choco install discord
-choco install mendeley
+choco install mendeley-reference-manager
+
 # App not working 
 # one drive
 # team
