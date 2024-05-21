@@ -43,6 +43,7 @@ git checkout -t origin/nr
 # Application (add -y to skip confirmation)
 choco install vscode
 choco install docker-desktop
+choco install golang
 choco install winrar
 choco install freecommander-xe.install --ignore-checksums
 choco install screenpresso
