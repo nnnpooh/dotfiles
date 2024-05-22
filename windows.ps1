@@ -44,6 +44,7 @@ git checkout -t origin/nr
 choco install vscode
 choco install docker-desktop
 choco install golang
+choco install python311
 # Github CLI
 choco install gh
 choco install winrar
@@ -59,7 +60,6 @@ choco install line
 choco install zoom
 choco install inkscape
 choco install googledrive
-choco install python311
 choco install notepadplusplus.install
 choco install treesizefree
 choco install vlc.install
