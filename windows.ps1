@@ -66,6 +66,7 @@ choco install vlc.install
 choco install gimp
 choco install discord
 choco install mendeley-reference-manager
+choco install traffic-monitor
 
 # App not working 
 # one drive
