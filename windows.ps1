@@ -67,7 +67,9 @@ choco install gimp
 choco install discord
 choco install mendeley-reference-manager
 choco install traffic-monitor
-
+choco install joplin
+choco install obsidian
+choco install treesizefree
 # App not working 
 # one drive
 # team
