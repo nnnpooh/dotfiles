@@ -70,6 +70,7 @@ choco install traffic-monitor
 choco install joplin
 choco install obsidian
 choco install treesizefree
+choco install syncbackfree
 # App not working 
 # one drive
 # team
