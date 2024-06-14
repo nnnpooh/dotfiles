@@ -42,6 +42,8 @@ git checkout -t origin/nr
 
 # Application (add -y to skip confirmation)
 choco install vscode
+# If the prompt in VSCode integrated terminal displays weird ANSI escape code, see this solution: https://github.com/microsoft/vscode/issues/211922#issuecomment-2162554431
+
 choco install docker-desktop
 choco install golang
 choco install python311
