@@ -50,7 +50,8 @@ choco install python311
 # Github CLI
 choco install gh
 choco install winrar
-choco install freecommander-xe.install --ignore-checksums
+# choco install freecommander-xe.install --ignore-checksums
+chco install onecommander
 choco install screenpresso
 choco install dbeaver
 choco install obs-studio
