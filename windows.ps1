@@ -77,3 +77,8 @@ choco install syncbackfree
 # App not working 
 # one drive
 # team
+#
+# Install PSFzf
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
+irm get.scoop.sh | iex # irm == invoke web request, ie download this file. iex == invoke expression, ie, evaluate the command.
+Install-Module -Name PSFzf
