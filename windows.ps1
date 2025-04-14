@@ -13,11 +13,8 @@ choco install -y powershell-core
 # Tools
 choco install -y git ripgrep wget fd unzip gzip mingw make fzf bat gh zoxide
 
-# Install PSFzf
-Install-Module -Name PSFzf -y
-
-# PSReadLine
-Install-Module -Name PSReadLine -y
+# Install PSFzf, PSReadLine
+Install-Module -Name PSFzf, PSReadLine -Force
 
 # Create powershell profile
 New-Item -Path $PROFILE -Type File -Force
