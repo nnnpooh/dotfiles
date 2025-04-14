@@ -20,14 +20,16 @@ Install-Module -Name PSFzf, PSReadLine -Force
 New-Item -Path $PROFILE -Type File -Force
 copy-item powershell_profile.ps1 $profile
 
+
+
 # Oh-my-posh
 choco install oh-my-posh
 $env:Path += ";$env:LOCALAPPDATA\Programs\oh-my-posh\bin"
 oh-my-posh font install meslo
 
 # Node
-nvm install 21
-nvm use 21
+nvm install 22
+nvm use 22
 
 # Google Chrome
 choco install googlechrome --ignore-checksums -y
