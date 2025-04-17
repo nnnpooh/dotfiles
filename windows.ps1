@@ -23,16 +23,19 @@ Install-Module -Name PSFzf, PSReadLine -Force
 New-Item -Path $PROFILE -Type File -Force
 copy-item powershell_profile.ps1 $profile
 
-
 # Oh-my-posh
 choco install oh-my-posh
 $env:Path += ";$env:LOCALAPPDATA\Programs\oh-my-posh\bin"
 oh-my-posh font install meslo
 
+# Warp
+winget install Warp.Warp
+
 # Google Chrome
 choco install googlechrome --ignore-checksums -y
 
 # Programing
+choco install nvm -y
 nvm install 22
 nvm use 22
 
@@ -66,7 +69,6 @@ choco install nerd-fonts-jetbrainsmono
 choco install wezterm
 
 # NVIM
-choco install nvm
 cd $env:USERPROFILE/appdata/local
 git clone git@github.com:nnnpooh/kickstart.nvim.git nvim
 cd nvim
