@@ -13,6 +13,9 @@ choco install -y powershell-core
 # Tools
 choco install -y git ripgrep wget fd unzip gzip mingw make fzf bat gh zoxide
 
+# Git config
+git config --global user.email "nnnpooh@gmail.com"; git config --global user.name "Nirand Pisutha-Arnond"
+
 # Install PSFzf, PSReadLine
 Install-Module -Name PSFzf, PSReadLine -Force
 
@@ -26,20 +29,26 @@ choco install oh-my-posh
 $env:Path += ";$env:LOCALAPPDATA\Programs\oh-my-posh\bin"
 oh-my-posh font install meslo
 
-# Node
-nvm install 22
-nvm use 22
-
 # Google Chrome
 choco install googlechrome --ignore-checksums -y
 
-# Application (add -y to skip confirmation)
+# Programing
+nvm install 22
+nvm use 22
+
 choco install vscode
 # If the prompt in VSCode integrated terminal displays weird ANSI escape code, see this solution: https://github.com/microsoft/vscode/issues/211922#issuecomment-2162554431
 
+choco install python312 -y
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+uv venv
+uv pip install jupyterlab ipykernel pandas matplotlib seaborn openpyxl ruff notebook
+# In VSCode after install Python Extension, add this in the settings
+#"python.venvPath": "~"
+
+# Applications
 choco install docker-desktop -y
 choco install googledrive -y
-choco install python312 -y
 choco install -y winrar onecommander screenpresso dbeaver obs-studio postman sumatrapdf.install pdf24 ccleaner zoom notepadplusplus.install joplin vlc.install discord treesizefree
 choco install -y line syncbackfree --ignore-checksums
 choco install obsidian -y
