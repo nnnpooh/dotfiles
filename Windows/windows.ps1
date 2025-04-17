@@ -57,8 +57,8 @@ wsl --set-default Ubuntu
 choco install docker-desktop -y
 
 # Applications
-choco install -y googledrive winrar onecommander screenpresso dbeaver obs-studio postman sumatrapdf.install pdf24 ccleaner zoom notepadplusplus.install vlc.install discord treesizefree
-choco install -y line syncbackfree --ignore-checksums
+choco install -y googledrive winrar onecommander dbeaver obs-studio postman sumatrapdf.install pdf24 ccleaner zoom notepadplusplus.install vlc.install discord treesizefree
+choco install -y line syncbackfree screenpresso --ignore-checksums
 choco install obsidian -y
 choco install traffic-monitor -y
 choco install mendeley-reference-manager -y 
