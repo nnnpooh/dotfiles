@@ -21,7 +21,6 @@ New-Item -Path $PROFILE -Type File -Force
 copy-item powershell_profile.ps1 $profile
 
 
-
 # Oh-my-posh
 choco install oh-my-posh
 $env:Path += ";$env:LOCALAPPDATA\Programs\oh-my-posh\bin"
@@ -39,32 +38,16 @@ choco install vscode
 # If the prompt in VSCode integrated terminal displays weird ANSI escape code, see this solution: https://github.com/microsoft/vscode/issues/211922#issuecomment-2162554431
 
 choco install docker-desktop -y
-choco install golang -y
-choco install python312 -y
-choco install winrar -y
-choco install onecommander -y
-choco install screenpresso -y
-choco install dbeaver -y
-choco install obs-studio -y
-choco install postman -y
-choco install sumatrapdf.install -y
-choco install pdf24 -y
-choco install ccleaner -y
-choco install line -y
-choco install zoom -y
-choco install inkscape -y
 choco install googledrive -y
-choco install notepadplusplus.install -y
-choco install treesizefree -y
-choco install vlc.install -y
-choco install gimp -y
-choco install discord -y
-choco install mendeley-reference-manager -y 
-choco install traffic-monitor -y
-choco install joplin -y
+choco install python312 -y
+choco install -y winrar onecommander screenpresso dbeaver obs-studio postman sumatrapdf.install pdf24 ccleaner zoom notepadplusplus.install joplin vlc.install discord treesizefree
+choco install -y line syncbackfree --ignore-checksums
 choco install obsidian -y
-choco install treesizefree -y
-choco install syncbackfree -y
+choco install traffic-monitor -y
+choco install mendeley-reference-manager -y 
+choco install gimp -y
+choco install inkscape -y
+choco install golang -y
 
 # Fonts
 choco install nerd-fonts-hack
