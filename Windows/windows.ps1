@@ -20,7 +20,7 @@ git config --global user.email "nnnpooh@gmail.com"; git config --global user.nam
 Install-Module -Name PSFzf, PSReadLine -Force
 
 # Oh-my-posh
-choco install oh-my-posh
+choco install oh-my-posh -y
 $env:Path += ";$env:LOCALAPPDATA\Programs\oh-my-posh\bin"
 oh-my-posh font install meslo
 # See oh-my-posh.md
@@ -41,7 +41,7 @@ choco install nvm -y
 nvm install 22
 nvm use 22
 
-choco install vscode
+choco install vscode -y
 # If the prompt in VSCode integrated terminal displays weird ANSI escape code, see this solution: https://github.com/microsoft/vscode/issues/211922#issuecomment-2162554431
 
 choco install python312 -y
@@ -53,8 +53,8 @@ uv pip install jupyterlab ipykernel pandas matplotlib seaborn openpyxl ruff note
 
 # WSL and Docker
 wsl --install -d Ubuntu
-wsl --set-default Ubuntu
 choco install docker-desktop -y
+wsl --set-default Ubuntu
 
 # Applications
 choco install -y googledrive winrar onecommander dbeaver obs-studio postman sumatrapdf.install pdf24 ccleaner zoom notepadplusplus.install vlc.install discord treesizefree
