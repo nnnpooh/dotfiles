@@ -1,5 +1,5 @@
 # Setup Oh My Posh in WSL
-sudo apt-get install zip
+sudo apt-get install zip -y
 curl -s https://ohmyposh.dev/install.sh | bash -s
 oh-my-posh font install meslo
 
