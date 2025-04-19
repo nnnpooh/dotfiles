@@ -65,6 +65,9 @@ choco install mendeley-reference-manager -y
 choco install gimp inkscape -y
 choco install golang -y
 
+# Fix discord not starting
+# Run "C:\Users\admin\AppData\Local\Discord\app-1.0.9188\Discord.exe" --squirrel-firstrun
+
 # Fonts
 choco install nerd-fonts-hack
 choco install nerd-fonts-jetbrainsmono
