@@ -66,8 +66,8 @@ choco install gimp inkscape -y
 choco install golang -y
 
 # Fix discord not starting
-# cd C:\Users\admin\AppData\Local\Discord\
-# cd \app-1.0.9188\
+# cd $env:LOCALAPPDATA\Discord\
+# cd \app-1.0.9188\ # Change as necessary
 # .\Discord.exe --squirrel-firstrun
 
 # Fonts
