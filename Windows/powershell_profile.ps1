@@ -13,3 +13,13 @@ Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 
 # PSReadLine
 Set-PSReadLineOption -PredictionViewStyle ListView
+
+# Clone github repo
+function Select-GhOrgRepo {
+    $selectedOrg = gh org list | fzf
+    if ($selectedOrg) {
+        $seletedRepo = gh repo list $selectedOrg | fzf
+    }
+    gh repo clone $seletedRepo.Split()[0]    
+}
+Set-Alias ghclone Select-GhOrgRepo
