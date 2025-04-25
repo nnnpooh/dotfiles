@@ -15,3 +15,5 @@ eval "$(oh-my-posh init bash --config $HOME/.cache/oh-my-posh/themes/catppuccin.
 	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 	&& sudo apt update \
 	&& sudo apt install gh -y
+
+git config --global user.email "nnnpooh@gmail.com" && git config --global user.name "Nirand Pisutha-Arnond"
