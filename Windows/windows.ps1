@@ -65,6 +65,9 @@ choco install mendeley-reference-manager -y
 choco install gimp inkscape -y
 choco install golang -y
 
+# Audacity
+choco install -y audacity ffmpeg
+
 # Fix discord not starting
 # cd $env:LOCALAPPDATA\Discord\
 # cd \app-1.0.9188\ # Change as necessary
