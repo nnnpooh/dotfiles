@@ -52,6 +52,7 @@ uv pip install jupyterlab ipykernel pandas matplotlib seaborn openpyxl ruff note
 #"python.venvPath": "~"
 
 # WSL and Docker
+wsl --update
 wsl --install -d Ubuntu
 choco install docker-desktop -y
 wsl --set-default Ubuntu
