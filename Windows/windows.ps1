@@ -23,7 +23,7 @@ Install-Module -Name PSFzf, PSReadLine -Force
 choco install oh-my-posh -y
 $env:Path += ";$env:LOCALAPPDATA\Programs\oh-my-posh\bin"
 oh-my-posh font install meslo
-# See oh-my-posh.md
+# See oh-my-posh.md for configuring Windows Terminal and VSCode Terminal
 
 # Create powershell profile
 New-Item -Path $PROFILE -Type File -Force
