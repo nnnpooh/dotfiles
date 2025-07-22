@@ -1,7 +1,6 @@
 # oh-my-posh
 $base = Split-Path -Path (Split-Path -Path (Get-Command oh-my-posh).Path -Parent) -Parent # Find the path to oh-my-posh
-oh-my-posh init pwsh --config "$base\themes\atomic.omp.json" | Invoke-Expression
-
+oh-my-posh init pwsh --config "$base\themes\catppuccin.omp.json" | Invoke-Expression
 # Zoxide
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
