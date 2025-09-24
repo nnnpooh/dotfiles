@@ -41,6 +41,9 @@ choco install nvm -y
 nvm install 22
 nvm use 22
 
+# Bitwarden
+choco install bitwarden-cli
+
 choco install vscode -y
 # If the prompt in VSCode integrated terminal displays weird ANSI escape code, see this solution: https://github.com/microsoft/vscode/issues/211922#issuecomment-2162554431
 
