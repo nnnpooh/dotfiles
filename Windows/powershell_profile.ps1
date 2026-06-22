@@ -33,7 +33,7 @@ function Select-GhClone {
 
     if ($Org) {
         # Select organization
-        $selectedOrg = gh org list | fzf --prompt "Select organization: "
+        $selectedOrg = gh org list --limit 100 | fzf --prompt "Select organization: "
         if (-not (Ensure-Selection $selectedOrg "No organization selected. Aborting.")) { return }
 
         # Select repo from organization
