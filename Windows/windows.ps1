@@ -7,11 +7,13 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 # Scoop (no admin)
 irm get.scoop.sh | iex # irm == invoke web request, ie download this file. iex == invoke expression, ie, evaluate the command.
 
-# Powershell Core
+# ----- On CMD
 choco install -y powershell-core 
 
-# Tools
-choco install -y git ripgrep wget fd unzip gzip mingw make fzf bat gh zoxide
+# ----- On Powershell 7 (Admin)
+# Tools and Essential Apps
+choco install -y git ripgrep wget fd unzip gzip mingw make fzf bat gh zoxide vscode
+choco install googlechrome --ignore-checksums -y
 
 # Git config
 git config --global user.email "nnnpooh@gmail.com"; git config --global user.name "Nirand Pisutha-Arnond"
@@ -21,34 +23,23 @@ Install-Module -Name PSFzf, PSReadLine -Force
 
 # Oh-my-posh
 choco install oh-my-posh -y
-$env:Path += ";$env:LOCALAPPDATA\Programs\oh-my-posh\bin"
 oh-my-posh font install meslo
 # See oh-my-posh.md for configuring Windows Terminal and VSCode Terminal
+mkdir "$HOME\.config"
+iwr -Uri "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/catppuccin.omp.json" -OutFile "$HOME\.config\catppuccin.omp.json"
 
 # Create powershell profile
 New-Item -Path $PROFILE -Type File -Force
 copy-item powershell_profile.ps1 $profile
 
-# Warp
-winget install Warp.Warp
-
-# Apps to get start with settings
-choco install googlechrome --ignore-checksums -y
-choco install joplin -y
-
 # Programing
 choco install nvm -y
-nvm install 22
-nvm use 22
+nvm install 24
+nvm use 24
 
-# Bitwarden
-choco install bitwarden-cli
-
-choco install vscode -y
-# If the prompt in VSCode integrated terminal displays weird ANSI escape code, see this solution: https://github.com/microsoft/vscode/issues/211922#issuecomment-2162554431
-
-choco install python312 -y
+# Python
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+uv python install 3.13
 uv venv
 uv pip install jupyterlab ipykernel pandas matplotlib seaborn openpyxl ruff notebook
 # In VSCode after install Python Extension, add this in the settings
@@ -62,16 +53,14 @@ choco install docker-desktop -y
 wsl --set-default Ubuntu
 
 # Applications
-choco install -y googledrive winrar onecommander dbeaver obs-studio postman sumatrapdf.install pdf24 ccleaner zoom notepadplusplus.install vlc.install discord treesizefree tailscale
+choco install -y googledrive winrar onecommander dbeaver obs-studio postman sumatrapdf.install pdf24 ccleaner zoom notepadplusplus.install vlc.install discord treesizefree obsidian joplin ffmpeg
 choco install -y line syncbackfree screenpresso --ignore-checksums
 choco install obsidian -y
-choco install traffic-monitor -y
-choco install mendeley-reference-manager -y 
-choco install gimp inkscape -y
-choco install golang -y
-
-# Audacity
-choco install -y audacity ffmpeg
+# choco install traffic-monitor -y
+# choco install mendeley-reference-manager -y 
+# choco install gimp inkscape -y
+# choco install golang -y
+# choco install -y audacity
 
 # Fix discord not starting
 # cd $env:LOCALAPPDATA\Discord\
@@ -79,17 +68,20 @@ choco install -y audacity ffmpeg
 # .\Discord.exe --squirrel-firstrun
 
 # Fonts
-choco install nerd-fonts-hack
-choco install nerd-fonts-jetbrainsmono
+# choco install nerd-fonts-hack
+# choco install nerd-fonts-jetbrainsmono
+
+# Bitwarden
+# choco install bitwarden-cli
 
 # Wezterm
-choco install wezterm
+# choco install wezterm
 
 # NVIM
-cd $env:USERPROFILE/appdata/local
-git clone git@github.com:nnnpooh/kickstart.nvim.git nvim
-cd nvim
-git checkout -t origin/nr 
+# cd $env:USERPROFILE/appdata/local
+# git clone git@github.com:nnnpooh/kickstart.nvim.git nvim
+# cd nvim
+# git checkout -t origin/nr 
 
 # App not working 
 # one drive

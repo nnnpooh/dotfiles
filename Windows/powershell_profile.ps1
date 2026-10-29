@@ -1,6 +1,6 @@
 # oh-my-posh
-$base = Split-Path -Path (Split-Path -Path (Get-Command oh-my-posh).Path -Parent) -Parent # Find the path to oh-my-posh
-oh-my-posh init pwsh --config "$base\themes\catppuccin.omp.json" | Invoke-Expression
+$base = "$HOME\.config"
+oh-my-posh init pwsh --config "$base\catppuccin.omp.json" | Invoke-Expression
 
 # Zoxide
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
@@ -55,22 +55,18 @@ function Select-GhClone {
 
 Set-Alias ghclone Select-GhClone
 
+# function Get-BWPassword {
+#     param(
+#         [string]$site
+#     )
+#     bw get password $site | clip
+# }
+# Set-Alias getbwpass Get-BWPassword
 
-function Get-BWPassword {
-    param(
-        [string]$site
-    )
-    bw get password $site | clip
-}
-
-Set-Alias getbwpass Get-BWPassword
-
-
-function Get-BWName {
-    param(
-        [string]$keyword
-    )
-    bw list items --search $keyword | ConvertFrom-Json | Select-Object -ExpandProperty name
-}
-
-Set-Alias getbwname Get-BWName
+# function Get-BWName {
+#     param(
+#         [string]$keyword
+#     )
+#     bw list items --search $keyword | ConvertFrom-Json | Select-Object -ExpandProperty name
+# }
+# Set-Alias getbwname Get-BWName
