@@ -46,7 +46,7 @@ uv pip install jupyterlab ipykernel pandas matplotlib seaborn openpyxl ruff note
 #"python.venvPath": "~"
 
 # Applications
-choco install -y googledrive winrar onecommander dbeaver obs-studio postman sumatrapdf.install pdf24 ccleaner zoom notepadplusplus.install vlc.install discord treesizefree obsidian joplin ffmpeg choco install powertoys freedownloadmanager
+choco install -y googledrive winrar onecommander dbeaver obs-studio postman sumatrapdf.install pdf24 ccleaner zoom notepadplusplus.install vlc.install discord treesizefree obsidian joplin ffmpeg powertoys
 choco install -y line screenpresso freedownloadmanager --ignore-checksums
 
 # WSL and Docker
