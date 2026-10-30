@@ -47,26 +47,25 @@ uv pip install jupyterlab ipykernel pandas matplotlib seaborn openpyxl ruff note
 
 # Applications
 choco install -y googledrive winrar onecommander dbeaver obs-studio postman sumatrapdf.install pdf24 ccleaner zoom notepadplusplus.install vlc.install discord treesizefree obsidian joplin ffmpeg choco install powertoys freedownloadmanager
-choco install -y line syncbackfree screenpresso freedownloadmanager --ignore-checksums
+choco install -y line screenpresso freedownloadmanager --ignore-checksums
 
 # WSL and Docker
 # Make sure that WSL and Hypervisor Platform is enabled in windows features.
 wsl --update
 wsl --install -d Debian
-choco install docker-desktop -y
+choco install -y docker-desktop 
 wsl --set-default Debian
 
 # Others
-# choco install traffic-monitor -y
-# choco install mendeley-reference-manager -y 
-# choco install gimp inkscape -y
-# choco install golang -y
-# choco install -y audacity
+# choco install -y traffic-monitor mendeley-reference-manager gimp inkscape audacity
 
 # Fix discord not starting
 # cd $env:LOCALAPPDATA\Discord\
 # cd \app-1.0.9188\ # Change as necessary
 # .\Discord.exe --squirrel-firstrun
+
+# Other programming languages
+# choco install golang -y
 
 # Fonts
 # choco install nerd-fonts-hack
@@ -84,7 +83,6 @@ wsl --set-default Debian
 # cd nvim
 # git checkout -t origin/nr 
 
-# App not working 
-# one drive
-# team
+# App not able to install via choco
+# one drive, team, syncbackfree
 
