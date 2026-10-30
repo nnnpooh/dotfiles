@@ -45,16 +45,18 @@ uv pip install jupyterlab ipykernel pandas matplotlib seaborn openpyxl ruff note
 # In VSCode after install Python Extension, add this in the settings
 #"python.venvPath": "~"
 
+# Applications
+choco install -y googledrive winrar onecommander dbeaver obs-studio postman sumatrapdf.install pdf24 ccleaner zoom notepadplusplus.install vlc.install discord treesizefree obsidian joplin ffmpeg choco install powertoys freedownloadmanager
+choco install -y line syncbackfree screenpresso --ignore-checksums
+
 # WSL and Docker
 # Make sure that WSL and Hypervisor Platform is enabled in windows features.
 wsl --update
-wsl --install -d Ubuntu
+wsl --install -d Debian
 choco install docker-desktop -y
-wsl --set-default Ubuntu
+wsl --set-default Debian
 
-# Applications
-choco install -y googledrive winrar onecommander dbeaver obs-studio postman sumatrapdf.install pdf24 ccleaner zoom notepadplusplus.install vlc.install discord treesizefree obsidian joplin ffmpeg choco install powertoys
-choco install -y line syncbackfree screenpresso --ignore-checksums
+# Others
 # choco install traffic-monitor -y
 # choco install mendeley-reference-manager -y 
 # choco install gimp inkscape -y
