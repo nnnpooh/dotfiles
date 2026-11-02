@@ -1,19 +1,29 @@
-# Setup Oh My Posh in WSL
-sudo apt-get install zip -y
-curl -s https://ohmyposh.dev/install.sh | bash -s
-oh-my-posh font install meslo
+sudo apt update && sudo apt upgrade -y;
+sudo apt install sudo curl vim dnsutils git -y;
+sudo apt install unzip zoxide tmux zsh -y
+zsh --version
+chsh -s $(which zsh)
 
-#Put this in .profile
-eval "$(oh-my-posh init bash --config $HOME/.cache/oh-my-posh/themes/catppuccin.omp.json)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# Github CLI
-(type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
-	&& sudo mkdir -p -m 755 /etc/apt/keyrings \
-        && out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
-        && cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
-	&& sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
-	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
-	&& sudo apt update \
-	&& sudo apt install gh -y
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-git config --global user.email "nnnpooh@gmail.com" && git config --global user.name "Nirand Pisutha-Arnond"
+# Install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+# Add zsh-autosuggestions zsh-syntax-highlighting zoxide to plugins in .zshrc
+sed -i 's/plugins\s*=\s*(.*)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting zoxide virtualenv)/g' ~/.zshrc
+
+# Fix Tmux prompt display character
+echo "\nexport LANG=C.UTF-8" >> ~/.zshrc
+echo "export LC_ALL=C.UTF-8" >> ~/.zshrc
+echo "\nexport VIRTUAL_ENV_DISABLE_PROMPT=1" >> ~/.zshrc
+
+# Change to theme that show hostname
+sed -i 's/^ZSH_THEME=.*/ZSH_THEME="gnzh"/' ~/.zshrc
+source ~/.zshrc
+
+# Tmux : Add delay to prevent character leaking
+touch ~/.tmux.conf && grep -qxF 'set -s escape-time 10' ~/.tmux.conf || echo 'set -s escape-time 10' >> ~/.tmux.conf
