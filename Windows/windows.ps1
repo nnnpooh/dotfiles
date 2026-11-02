@@ -30,7 +30,7 @@ iwr -Uri "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/theme
 
 # Create powershell profile
 New-Item -Path $PROFILE -Type File -Force
-copy-item powershell_profile.ps1 $profile
+# copy-item powershell_profile.ps1 $profile
 
 # Programing
 choco install nvm -y
