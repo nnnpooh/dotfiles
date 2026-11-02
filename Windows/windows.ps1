@@ -44,6 +44,8 @@ uv venv
 uv pip install jupyterlab ipykernel pandas matplotlib seaborn openpyxl ruff notebook
 # In VSCode after install Python Extension, add this in the settings
 #"python.venvPath": "~"
+# Need to install graphviz for matplotlib to work properly
+choco install graphviz
 
 # Applications
 choco install -y googledrive winrar onecommander dbeaver obs-studio postman sumatrapdf.install pdf24 ccleaner zoom notepadplusplus.install vlc.install discord treesizefree obsidian joplin ffmpeg powertoys
